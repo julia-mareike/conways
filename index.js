@@ -1,17 +1,22 @@
+// this could look nicer ¯\_(ツ)_/¯
+
+const clear = require('clear')
+
 const populateBoard = require('./populateBoard')
 const createBoard = require('./createBoard')
 const countNeighbours = require('./countNeighbours')
 const checkEachCell = require('./checkEachCell')
 const nextGeneration = require('./nextGeneration')
+const displayBoard = require('./displayBoard')
 
-const board = (populateBoard(createBoard(5)))
+let board = (populateBoard(createBoard(50)))
 
-const neighboursBoard = checkEachCell(board)
-const nextGen = nextGeneration(board, neighboursBoard)
-console.log('ng', nextGen)
+setInterval(tick, 300)
 
-
-
-// console.log('board\n', board)
-// console.log('neighbours\n', neighboursBoard)
-
+function tick() {
+    clear()
+    displayBoard(board)
+    let neighboursBoard = checkEachCell(board)
+    let nextGen = nextGeneration(board, neighboursBoard)
+    board = nextGen
+}

@@ -1,4 +1,5 @@
 /*global test expect*/
+
 const createBoard = require('../createBoard')
 const populateBoard = require('../populateBoard')
 const generateLife = require('../generateLife')
@@ -11,7 +12,7 @@ test('test runner working', function () {
     expect(true).toBeTruthy()
 })
 
-test('generate 5x5 board', function () {
+test('generate size specific board', function () {
     const board = createBoard(3)
     const expected = [
         [0, 0, 0],
@@ -24,7 +25,6 @@ test('generate 5x5 board', function () {
 
 test('life is generated randomly', () => {
     const actual = generateLife()
-    // console.log(actual)
     expect(actual).toBeGreaterThanOrEqual(0)
 })
 

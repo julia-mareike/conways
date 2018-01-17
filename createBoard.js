@@ -10,7 +10,5 @@ function createBoard(size) {
     }
     return board;
 }
-createBoard(5)
-module.exports = createBoard
 
-   
+module.exports = createBoard
