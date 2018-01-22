@@ -1,4 +1,5 @@
-function createBoard(row, col) {
+
+function buildBoard(row, col) {
 if (!col) col = row
     let board = []
     for (let i = 0; i < row; i++) {
@@ -10,5 +11,5 @@ if (!col) col = row
     }
     return board;
 }
-//console.log(createBoard(10, 25))
-module.exports = createBoard
+//console.log(buildBoard(10, 25))
+module.exports = buildBoard

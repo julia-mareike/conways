@@ -1,12 +1,12 @@
 const assignLetters = require('./assign-letters')
-const createBoard = require('./create-board')
+const buildBoard = require('./build-board')
 
 function typeOutBoard(string) {
 
     const characters = string.split('');
     let array = []
     for (let i = 0; i < 5; i++) {
-        array.push(assignLetters(characters[i]) || createBoard(5))
+        array.push(assignLetters(characters[i]) || buildBoard(5))
     }
 
     let letterArray = []
@@ -26,9 +26,5 @@ function typeOutBoard(string) {
     }
     return finalBoard
 }
-
-//console.log(array)
-//let newArray = array.map((cell) => {
-//})
 
 module.exports = typeOutBoard
