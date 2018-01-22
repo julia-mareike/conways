@@ -1,19 +1,16 @@
 function nextGeneration(board, neighboursBoard) {
 
-    let rebornArray = []                    //outer array
     for (let i = 0; i < board.length; i++) {
-        let row = []                        // inner array
         for (let j = 0; j < board[i].length; j++) {
-
             let neighbours = neighboursBoard[i][j]
-            if (board[i][j]) {              //if alive
-                if (neighbours === 2 || neighbours === 3) { // if 2 or 3 neigbours
-                    board[i][j] = 1         // lives
+            if (board[i][j]) {              
+                if (neighbours === 2 || neighbours === 3) { 
+                    board[i][j] = 1         
                 }
-                else board[i][j] = null        // else dies
+                else board[i][j] = null        
             }
-            if (!board[i][j] && neighbours === 3) { //if dead & 3 neighbours
-                board[i][j] = 1             //lives!
+            if (!board[i][j] && neighbours === 3) { 
+                board[i][j] = 1             
             }
         }
     } return board

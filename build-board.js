@@ -11,5 +11,5 @@ if (!col) col = row
     }
     return board;
 }
-//console.log(buildBoard(10, 25))
+
 module.exports = buildBoard

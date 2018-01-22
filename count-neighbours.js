@@ -1,6 +1,3 @@
-// h/t to Peter for Math.max/min (•‿•)
-// creates delimited box around (& including) target cell to loop over
-
 function countNeighbours(arr, row, col) {
 
     const rowStart = Math.max(0, row - 1)

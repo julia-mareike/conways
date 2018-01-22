@@ -4,9 +4,9 @@ function checkEachCell(board) {
 
     let neighboursArray = []
     for (let i = 0; i < board.length; i++) {
-        let row = []                                 // create row array to be filled & pushed to neighboursArray at end
+        let row = []                                
         for (let j = 0; j < board[i].length; j++) {
-            let total = countNeighbours(board, i, j) // pass board & current cell indices to countNeighbours function
+            let total = countNeighbours(board, i, j) 
             row.push(total)
         }
         neighboursArray.push(row)
