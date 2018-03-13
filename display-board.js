@@ -7,8 +7,7 @@ const box = blessed.box({
     height: '100%',
     tags: true,
     style: {
-        fg: 'magenta',
-        bg: 'black'
+        fg: 'magenta'
     }
 })
 
@@ -18,7 +17,7 @@ screen.append(box)
 
 function displayBoard(board) {
     const symbol = process.argv[2]
-    let liveCell = '◍'
+    let liveCell = '✼'
     if (symbol && symbol !== 'ok') liveCell = symbol
 
     let finalBoard = []
