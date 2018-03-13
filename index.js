@@ -11,7 +11,7 @@ let board = generateBoard(size)
 
 setInterval(() => {
     displayBoard(board)
-    setTimeout(reset, 100)
+    setTimeout(reset, 400)
 }, rate)
 
 function reset() {
