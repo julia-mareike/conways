@@ -10,10 +10,10 @@ const rate = process.argv[4] || 80
 let board = generateBoard(size)
 
 setInterval(() => {
-    displayBoard(board)
-    setTimeout(reset, 100)
+  displayBoard(board)
+  setTimeout(reset, 400)
 }, rate)
 
-function reset() {
-    nextGeneration(board, checkEachCell(board))
+function reset () {
+  nextGeneration(board, checkEachCell(board))
 }
